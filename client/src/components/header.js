@@ -7,6 +7,7 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { PiTranslateFill } from "react-icons/pi";
 import { FaUserCircle } from "react-icons/fa";  // Import user icon
 import Logo from '../assets/Logo.png'
+import { API_BASE_URL } from "../constants";
 export const Header = ({ isLoggedIn, setSignupFlag, signupFlag }) => {
   const navigate = useNavigate();
   const [showProfileDropdown, setShowProfileDropdown] = useState(false);
@@ -17,7 +18,7 @@ export const Header = ({ isLoggedIn, setSignupFlag, signupFlag }) => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');  // Get the token from localStorage
-        const res = await axios.get('https://online-biding-system.onrender.com/api/users/me', {
+        const res = await axios.get(`${API_BASE_URL}/api/users/me`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },

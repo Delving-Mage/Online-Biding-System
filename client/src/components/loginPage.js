@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { FaApple, FaFacebook, FaGoogle } from "react-icons/fa6";
 import axios from "axios";
+import { API_BASE_URL } from "../constants";
 
 export const LoginPage = ({setUserName, signupFlag, setSignupFlag, setIsLoggedIn }) => {
   const navigate = useNavigate();
@@ -59,7 +60,7 @@ export const LoginPage = ({setUserName, signupFlag, setSignupFlag, setIsLoggedIn
     e.preventDefault();
     if (validateForm()) {
       try {
-        const res = await axios.post('https://online-biding-system.onrender.com/api/users/login', formData);
+        const res = await axios.post(`${API_BASE_URL}/api/users/login`, formData);
         localStorage.setItem('token', res.data.token);
         setIsLoggedIn(true);
         navigate('/');

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "../styles/auctionDetail.css";  // Create a new CSS for the detailed view
+import { API_BASE_URL } from "../constants";
 
 export const AuctionDetail = () => {
   const { auctionId } = useParams();  // To get the auction ID from the URL
@@ -12,7 +13,7 @@ export const AuctionDetail = () => {
   useEffect(() => {
     const fetchAuction = async () => {
       try {
-        const res = await axios.get(`https://online-biding-system.onrender.com/api/auctions/${auctionId}`);
+        const res = await axios.get(`${API_BASE_URL}/api/auctions/${auctionId}`);
         setAuction(res.data);
       } catch (err) {
         console.error(err);
@@ -34,13 +35,13 @@ export const AuctionDetail = () => {
         return; // Prevent submission if the bid amount is invalid
       }
 
-      await axios.post(`https://online-biding-system.onrender.com/api/auctions/${auctionId}/bid`, 
+      await axios.post(`${API_BASE_URL}/api/auctions/${auctionId}/bid`, 
         { amount: bidAmount }, // Correctly structure the payload
         { headers }
       );
 
       // Optionally refresh auction details after bid submission
-      const res = await axios.get(`https://online-biding-system.onrender.com/api/auctions/${auctionId}`);
+      const res = await axios.get(`${API_BASE_URL}/api/auctions/${auctionId}`);
       setAuction(res.data); // Update the auction state
     } catch (err) {
       console.error(err);
@@ -56,7 +57,7 @@ export const AuctionDetail = () => {
       </button>
       <div className="auction-detail">
         <img 
-          src={`https://online-biding-system.onrender.com/${auction.imageUrl}`} 
+          src={`${API_BASE_URL}/${auction.imageUrl}`} 
           alt={auction.title} 
           className="auction-detail-image" 
         />

@@ -4,6 +4,7 @@ import { SignedUpLandingPage } from "./signedUpLandingPage";
 import "../styles/signupPage.css";
 import { FaGoogle, FaApple, FaFacebook } from "react-icons/fa";
 import axios from "axios";
+import { API_BASE_URL } from "../constants";
 
 export const SignupPage = ({ signupFlag, setSignupFlag }) => {
   useEffect(() => {
@@ -68,7 +69,7 @@ export const SignupPage = ({ signupFlag, setSignupFlag }) => {
 
     if (validateForm()) {
       try {
-        await axios.post("https://online-biding-system.onrender.com/api/users/register", formData);
+        await axios.post(`${API_BASE_URL}/api/users/register`, formData);
         setSignedFlag(true); // Switch to success landing page
       } catch (err) {
         setError("Registration failed. Please try again.");

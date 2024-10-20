@@ -5,6 +5,7 @@ import axios from "axios";
 import CreateAuctionItem from "./createAuctionItem";
 import Modal from "./modal"; // Import the Modal component
 import Footer from "./footer";
+import { API_BASE_URL } from "../constants";
 
 export const Dashboard = ({ userName, isLoggedIn }) => {
   const [auctions, setAuctions] = useState([]);
@@ -17,7 +18,7 @@ export const Dashboard = ({ userName, isLoggedIn }) => {
     const fetchAuctions = async () => {
       setLoading(true); // Set loading to true before fetching
       try {
-        const { data } = await axios.get("https://online-biding-system.onrender.com/api/auctions");
+        const { data } = await axios.get(`${API_BASE_URL}/api/auctions`);
         setAuctions(data);
       } catch (err) {
         if (err.response) {
@@ -87,7 +88,7 @@ export const Dashboard = ({ userName, isLoggedIn }) => {
           {auctions.map((item) => (
             <div className="auction-card" key={item._id}>
               <img
-                src={`https://online-biding-system.onrender.com/${item.imageUrl}`}
+                src={`${API_BASE_URL}/${item.imageUrl}`}
                 alt={item.title}
                 className="auction-image"
               />

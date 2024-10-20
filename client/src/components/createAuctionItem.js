@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../styles/createAuctionItem.css'; // Import your CSS file
+import { API_BASE_URL } from '../constants';
 
 const CreateAuctionItem = ({ handleClose }) => { // Accept handleClose as a prop
   const [formData, setFormData] = useState({
@@ -37,7 +38,7 @@ const CreateAuctionItem = ({ handleClose }) => { // Accept handleClose as a prop
     }
 
     try {
-      await axios.post('https://online-biding-system.onrender.com/api/auctions', formDataToSend, {
+      await axios.post(`${API_BASE_URL}/api/auctions`, formDataToSend, {
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header
           'Content-Type': 'multipart/form-data', // Set the correct content type
