@@ -17,7 +17,7 @@ export const Header = ({ isLoggedIn, setSignupFlag, signupFlag }) => {
     const fetchUserData = async () => {
       try {
         const token = localStorage.getItem('token');  // Get the token from localStorage
-        const res = await axios.get('http://localhost:5001/api/users/me', {
+        const res = await axios.get('https://online-biding-system.onrender.com/api/users/me', {
           headers: {
             Authorization: `Bearer ${token}`,
           },

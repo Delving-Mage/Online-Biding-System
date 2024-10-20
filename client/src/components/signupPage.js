@@ -68,7 +68,7 @@ export const SignupPage = ({ signupFlag, setSignupFlag }) => {
 
     if (validateForm()) {
       try {
-        await axios.post("http://localhost:5001/api/users/register", formData);
+        await axios.post("https://online-biding-system.onrender.com/api/users/register", formData);
         setSignedFlag(true); // Switch to success landing page
       } catch (err) {
         setError("Registration failed. Please try again.");

@@ -11,7 +11,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: 'http://localhost:5001', // Replace with your API URL
+        url: 'https://online-biding-system.onrender.com', // Replace with your API URL
         description: 'Development server',
       },
     ],

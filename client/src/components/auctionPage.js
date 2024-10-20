@@ -7,14 +7,14 @@ function AuctionPage() {
   const [auction, setAuction] = useState(null);
 
   useEffect(() => {
-    axios.get(`http://localhost:5001/api/auctions/${id}`)
+    axios.get(`https://online-biding-system.onrender.com/api/auctions/${id}`)
       .then(res => setAuction(res.data))
       .catch(err => console.error(err));
   }, [id]);
 
   const placeBid = (bidAmount) => {
     const token = localStorage.getItem('token');
-    axios.post(`http://localhost:5001/api/auctions/${id}/bid`, { amount: bidAmount }, {
+    axios.post(`https://online-biding-system.onrender.com/api/auctions/${id}/bid`, { amount: bidAmount }, {
       headers: { Authorization: `Bearer ${token}` }
     })
       .then(res => setAuction(res.data))

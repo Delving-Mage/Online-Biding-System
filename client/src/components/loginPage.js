@@ -59,7 +59,7 @@ export const LoginPage = ({setUserName, signupFlag, setSignupFlag, setIsLoggedIn
     e.preventDefault();
     if (validateForm()) {
       try {
-        const res = await axios.post('http://localhost:5001/api/users/login', formData);
+        const res = await axios.post('https://online-biding-system.onrender.com/api/users/login', formData);
         localStorage.setItem('token', res.data.token);
         setIsLoggedIn(true);
         navigate('/');

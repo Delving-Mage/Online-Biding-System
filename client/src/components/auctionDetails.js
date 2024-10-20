@@ -12,7 +12,7 @@ export const AuctionDetail = () => {
   useEffect(() => {
     const fetchAuction = async () => {
       try {
-        const res = await axios.get(`http://localhost:5001/api/auctions/${auctionId}`);
+        const res = await axios.get(`https://online-biding-system.onrender.com/api/auctions/${auctionId}`);
         setAuction(res.data);
       } catch (err) {
         console.error(err);
@@ -34,13 +34,13 @@ export const AuctionDetail = () => {
         return; // Prevent submission if the bid amount is invalid
       }
 
-      await axios.post(`http://localhost:5001/api/auctions/${auctionId}/bid`, 
+      await axios.post(`https://online-biding-system.onrender.com/api/auctions/${auctionId}/bid`, 
         { amount: bidAmount }, // Correctly structure the payload
         { headers }
       );
 
       // Optionally refresh auction details after bid submission
-      const res = await axios.get(`http://localhost:5001/api/auctions/${auctionId}`);
+      const res = await axios.get(`https://online-biding-system.onrender.com/api/auctions/${auctionId}`);
       setAuction(res.data); // Update the auction state
     } catch (err) {
       console.error(err);
@@ -56,7 +56,7 @@ export const AuctionDetail = () => {
       </button>
       <div className="auction-detail">
         <img 
-          src={`http://localhost:5001/${auction.imageUrl}`} 
+          src={`https://online-biding-system.onrender.com/${auction.imageUrl}`} 
           alt={auction.title} 
           className="auction-detail-image" 
         />

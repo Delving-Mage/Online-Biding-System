@@ -17,7 +17,7 @@ export const Dashboard = ({ userName, isLoggedIn }) => {
     const fetchAuctions = async () => {
       setLoading(true); // Set loading to true before fetching
       try {
-        const { data } = await axios.get("http://localhost:5001/api/auctions");
+        const { data } = await axios.get("https://online-biding-system.onrender.com/api/auctions");
         setAuctions(data);
       } catch (err) {
         if (err.response) {
@@ -87,7 +87,7 @@ export const Dashboard = ({ userName, isLoggedIn }) => {
           {auctions.map((item) => (
             <div className="auction-card" key={item._id}>
               <img
-                src={`http://localhost:5001/${item.imageUrl}`}
+                src={`https://online-biding-system.onrender.com/${item.imageUrl}`}
                 alt={item.title}
                 className="auction-image"
               />

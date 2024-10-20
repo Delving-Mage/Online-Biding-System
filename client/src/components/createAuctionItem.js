@@ -37,7 +37,7 @@ const CreateAuctionItem = ({ handleClose }) => { // Accept handleClose as a prop
     }
 
     try {
-      await axios.post('http://localhost:5001/api/auctions', formDataToSend, {
+      await axios.post('https://online-biding-system.onrender.com/api/auctions', formDataToSend, {
         headers: {
           Authorization: `Bearer ${token}`, // Include the token in the Authorization header
           'Content-Type': 'multipart/form-data', // Set the correct content type
