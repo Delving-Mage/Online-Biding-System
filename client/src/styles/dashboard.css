@@ -1,0 +1,105 @@
+.dashboard-container{
+    display: flex;
+    margin-left: 60px;
+    font-size: 24px;
+    font-weight: 600;
+}
+.dashboard_p{
+    color:#235BDB;
+    margin-left:5px
+}
+.auction-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjusts spacing between cards */
+    gap: 20px; /* Space between cards */
+    margin-top: 20px; /* Space above the grid */
+    padding: 60px;
+    position: relative;
+    right: 61px;
+    margin-top: 0;
+    padding-top: 20px;
+  }
+  
+  .auction-card {
+    background-color: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+    width: 300px;
+    height: 356px;
+    margin-left: 50px;
+    /* width: calc(30% - 16px); 5 cards per row, accounting for gap */
+    box-sizing: border-box; /* Ensures padding is included in width */
+  }
+  
+  .auction-image {
+    width: 100%; /* Image will take full width of the card */
+    height: 300px; /* Maintain aspect ratio */
+  }
+  .auction-btn{
+    background: linear-gradient(79.69deg, #DB2721 -0.64%, #5AD7FE 107.84%);
+    border: none;
+    width: 100px;
+    height: 31px;
+    border-radius: 5px;
+  }
+  
+/* ----- */
+  .auction-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 0;
+    row-gap: 20px;
+  }
+  
+  .auction-card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .auction-image {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+  }
+  
+  .auction-btn {
+    background: linear-gradient(79.69deg, #DB2721 -0.64%, #5AD7FE 107.84%);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 80%;
+  }
+
+  .create-auction-btn{
+    position: relative;
+    left: 634px;
+    height: 32px;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(79.69deg, #1D4ED8 -0.64%, #5AD7FE 107.84%);
+    color: white;
+    font-weight: bold;
+  }
+
+  .dashboard-header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  .dashboard-p{
+    position: relative;
+    right: 350px;
+  }
+  .dashboard-select{
+    position: relative;
+    left: 350px;
+  }
+  

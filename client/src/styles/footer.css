@@ -1,0 +1,93 @@
+/* Footer Styles */
+.footer {
+    background-color: #0d0d19;
+    color: #ffffff;
+    padding: 40px 60px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Left section: Logo and company name */
+  .footer-left {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .logo-img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  .company-name {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* Middle section: Navigation Links */
+  .footer-middle {
+    display: flex;
+    gap: 40px;
+  }
+  
+  .footer-links h4 {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+  
+  .footer-links ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-links a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Right section: Social icons */
+  .footer-right .social-icons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    font-size: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #1e90ff; /* Change color on hover */
+  }
+  
+  /* Bottom section: Copyright */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+  }
+  
+  .footer-bottom p {
+    margin: 0;
+    font-size: 14px;
+    color: #888888;
+  }
+  

@@ -1,0 +1,88 @@
+.homepage-container {
+    width: 1285px;
+    position: relative;
+    top: 40px;
+    left: 124px;
+    height: 790px;
+    display: flex;
+    flex-direction: row;
+    background-image: url('../assets/HomepageBackground.png'), url('../assets/HomepageSpiral.png'), url('../assets/HomepageVector.png'),url('../assets/HomepageSecureIcon.png');
+    background-position:529px 100px, 468px 437px, 520px 138px, 815px 90px;
+    background-size:754px 350px, 178px 151px, 69px 142px, 70px 70px;
+    background-repeat: no-repeat, no-repeat, no-repeat,no-repeat;
+}
+.homepage-flexContainerItem{
+    flex-basis: 520px;
+    text-align: start;
+}
+.homepage-p{
+    font-family: Inter;
+    font-size: 19px;
+    width: 369px;
+}
+.homepage-heading{
+font-size: 76.2px;
+}
+.homepage-button{
+    background: linear-gradient(79.69deg, #1D4ED8 -0.64%, #5AD7FE 107.84%);
+    border: none;
+    border-radius: 35px;
+    width: 178px;
+    height: 59px;
+    color: #FFFFFF;
+    font-size: 17px;
+    font-family: Inter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.homepage-img{
+    width: 550px;
+    height: 658px;
+    position: relative;
+    /* top: 102px; */
+    right: 89px;
+}
+.homepage-bgImg{
+    width: 550px;
+    height: 658px;
+    position: relative;
+    right: 40px;
+}
+.homepage-text{
+    margin-left: 10px;
+}
+.homepage-alertBoxTop{
+    width: 268px;
+    height: 106px;
+    position: absolute;
+    top: 166px;
+    right: 267px;
+}
+.homepage-alertBoxBottom{
+    width: 368px;
+    height: 106px;
+    position: absolute;
+    top: 406px;
+    right: 520px;
+}
+.homepage-alertProfile{
+    width: 57px;
+    height: 51px;
+    position: absolute;
+    left: 424px;
+    top: 424px;
+}
+.homepage-alertText{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 495px;
+    top: 427px;
+    color: #FFFFFF;
+    font-family: Inter;
+    font-size: 15px;
+}
+
